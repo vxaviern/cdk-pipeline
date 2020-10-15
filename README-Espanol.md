@@ -2,17 +2,17 @@
 
 Esta aplicacion de CDK hace 2 cosas:
 
-1. Deploys a CodePipeline with 3 stages (Source --> Build --> Deploy)
-2. Deploys a Lambda Function using the CodePipeline from 1.
+1. Crea un CodePipeline con 3 etapas (Source --> Build --> Deploy)
+2. Despliega una funcion lambda utilizando la CodePipeline 
 
-Any code changes done to the lambda function (index.ts) will be picked up by the pipeline and a **build will be triggered automatically**
+Cualquier cambio que se le haga a la funcion lambda (index.ts) sera detectada por la Pipeline y **automaticamente se dispara un build**
 
-## Pre-Requisites
-1. [AWS CDK installed](https://cdkworkshop.com/15-prerequisites/500-toolkit.html)
+## Pre-Requisitos
+1. [AWS CDK instalado](https://cdkworkshop.com/15-prerequisites/500-toolkit.html)
 
-### Setting Up TypeScript Project
-1. Create a new CodeCommit repository named **pipeline** using the CodeCommit console or the AWS CLI.
-2. Clone empty repo from above: git clone CODECOMMIT-REPO-URL **pipeline**
+### Configurar el proyecto de Typescript
+1. Creen un repositorio CodeCommit y llamenlo **pipeline** usando la consola de AWS o la CLI
+2. Clonen el repositorio: git clone CODECOMMIT-REPO-URL **pipeline**
 3. cd pipeline
 4. cdk init --language typescript
 5. npm install @aws-cdk/aws-codedeploy @aws-cdk/aws-lambda @aws-cdk/aws-codebuild @aws-cdk/aws-codepipeline
@@ -22,7 +22,7 @@ Any code changes done to the lambda function (index.ts) will be picked up by the
 9. git commit -m "initial commit"
 10. git push
 
-## Copy Code
+## Copiar el Codigo
 
 1. lambda/lambda.ts
 2. lib/lambda-stack.ts
@@ -32,14 +32,14 @@ Any code changes done to the lambda function (index.ts) will be picked up by the
 6. git commit -m "add CDK app"
 7. git push
 
-## Deploy Pipeline
+## Crear CodePipeline y Desplegar la Funcion Lambda
 
 1. cdk bootstrap
 2. cdk deploy PipelineDeployingLambdaStack
 
-## Clean Up
+## Borrar la Infraestructura
 
-From the Cloudformation screen on the AWS console, delete both stacks in the **following order**:
+Desde la consola de Cloudformation, borren ambos stacks en **este orden**:
 
 1. LambdaDeploymentStack
 2. PipelineDeployingLambdaStack
