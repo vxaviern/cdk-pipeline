@@ -1,5 +1,12 @@
 # CDK-Pipeline
 
+This CDK app does 2 things:
+
+1. Deploys a CodePipeline with 3 stages (Source --> Build --> Deploy)
+2. Deploys a Lambda Functions using 1
+
+Any code changes done to the lambda function (index.ts) will be picked up by the pipeline and a build will be triggered **automatically**
+
 ## Pre-Requisites
 1. AWS CDK installed
 
