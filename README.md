@@ -8,7 +8,7 @@ This CDK app does 2 things:
 Any code changes done to the lambda function (index.ts) will be picked up by the pipeline and a build will be triggered **automatically**
 
 ## Pre-Requisites
-1. AWS CDK installed
+1. AWS CDK [installed](https://cdkworkshop.com/15-prerequisites/500-toolkit.html)
 
 ### Setting Up TypeScript Project
 1. Create a new CodeCommit repository named **pipeline** using the CodeCommit console or the AWS CLI.
