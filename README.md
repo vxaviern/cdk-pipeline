@@ -1,6 +1,6 @@
 # cdk-pipeline
 
-# Pre-Requisites
+## Pre-Requisites
 1. AWS CDK installed
 
 Setting Up Project
